@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1011751500459",
+    "firebase_url": "https://secondhandprod-81b0b.firebaseio.com",
+    "project_id": "secondhandprod-81b0b",
+    "storage_bucket": "secondhandprod-81b0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011751500459:android:94b302d6563120c7",
+        "android_client_info": {
+          "package_name": "com.example.fhv2ndhandprod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011751500459-9jqo9h7u6e5s98704ersrctpn2b5m1br.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fhv2ndhandprod",
+            "certificate_hash": "4ae4369bd7e2b0d5a83e91883703310f9617829a"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6ZE-0g9vm9OjZ3J3q1E-9RxrBzRR-Ebk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011751500459-g5esrse7ec5dn90a5t4467jogvnvbk70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011751500459:android:f62c6cbc213746ae",
+        "android_client_info": {
+          "package_name": "com.example.secondhandprod"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6ZE-0g9vm9OjZ3J3q1E-9RxrBzRR-Ebk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011751500459-g5esrse7ec5dn90a5t4467jogvnvbk70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
