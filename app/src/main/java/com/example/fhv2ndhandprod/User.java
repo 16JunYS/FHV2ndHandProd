@@ -1,5 +1,7 @@
 package com.example.fhv2ndhandprod;
 
+import android.widget.Toast;
+
 public class User {
     private int id;
     private String email, password;
@@ -7,6 +9,14 @@ public class User {
     private String address;
     private String phoneNumber;
 
+    public User() {}
+    public User(String firstName, String lastName, String email, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+
+    }
     public User(String email, String password, String firstName, String lastName, String address, String phoneNumber) {
         this.email = email;
         this.password = password;
