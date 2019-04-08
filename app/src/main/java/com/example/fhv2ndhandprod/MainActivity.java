@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.content.res.Configuration; //for translator
+import java.util.Locale; //for translator
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +13,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Locale locale = new Locale("de");
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+
     }
     public void TEMP_register(View view) {
         Intent intent = new Intent(MainActivity.this, RegisterActivity.class);

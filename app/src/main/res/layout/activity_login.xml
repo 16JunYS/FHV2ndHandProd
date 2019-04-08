@@ -24,7 +24,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Username"
+                    android:text="@string/username"
                     android:textSize="15sp" />
 
                 <EditText
@@ -33,13 +33,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:ems="40"
-                    android:hint="enter your E-mail"
+                    android:hint="@string/enter_your_e_mail"
                     android:inputType="textEmailAddress" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Password"
+                    android:text="@string/password"
                     android:textSize="15sp" />
 
                 <EditText
@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:ems="40"
-                    android:hint="enter your Password"
+                    android:hint="@string/enter_your_password"
                     android:inputType="textPassword" />
             </LinearLayout>
 
@@ -63,7 +63,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_weight="1"
-                    android:onClick="click_login" />
+                    android:onClick="click_login"
+                    android:text="@string/log_in" />
             </LinearLayout>
         </LinearLayout>
 
@@ -79,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="click_forgot_pw"
-                android:text="Forgot your password?"
+                android:text="@string/forgot_your_password"
                 android:textSize="13sp" />
 
             <TextView
@@ -96,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="click_register"
-                android:text="Don't have an account yet?"
+                android:text="@string/don_t_have_an_account_yet"
                 android:textSize="13sp" />
         </LinearLayout>
     </LinearLayout>
