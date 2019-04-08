@@ -3,4 +3,12 @@
     <string name="app_name">FHV2ndHandProd</string>
     <string name="first_name">Vorname</string>
     <string name="last_name">Nachname</string>
+    <string name="password">Passwort</string>
+    <string name="register">Registrieren</string>
+    <string name="log_in">Anmelden</string>
+    <string name="forgot_your_password">Passwort vergessen</string>
+    <string name="don_t_have_an_account_yet">Account erstellen</string>
+    <string name="enter_your_password">Geben Sie ein Passwort ein</string>
+    <string name="username">Benutzername</string>
+    <string name="enter_your_e_mail">Geben Sie Ihre E-Mail Adresse ein</string>
 </resources>

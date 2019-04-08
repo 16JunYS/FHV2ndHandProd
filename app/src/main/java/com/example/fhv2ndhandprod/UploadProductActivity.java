@@ -7,7 +7,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class UploadProductActivity extends AppCompatActivity{
+    private DatabaseReference databaseReference;
     private EditText productNameEditText, productDescriptionEditText, productPriceEditText;
     private ImageView productImageView;
     private Button uploadButton;
@@ -30,6 +35,8 @@ public class UploadProductActivity extends AppCompatActivity{
                 createNewProduct();
             }
         });
+
+        databaseReference = FirebaseDatabase.getInstance().getReference();
     }
 
     private void createNewProduct() {
@@ -37,9 +44,8 @@ public class UploadProductActivity extends AppCompatActivity{
         newProduct.setDescription(productDescriptionEditText.getText().toString());
         //set Image
         newProduct.setPrice(Double.parseDouble(productPriceEditText.getText().toString()));
-
+        databaseReference.child(newProduct.getName()).setValue(newProduct);
         if(validateNewProduct(newProduct)) {
-            //save into db
         }
     }
 
