@@ -10,10 +10,10 @@ public class Product {
     private double price;
     private String location;
     private Date date;
-    private User seller;
+    private String seller;
 
 
-    public Product(String name, String description, String image, double price, String location, Date date, User seller) {
+    public Product(String name, String description, String image, double price, String location, Date date, String seller) {
         this.name = name;
         this.description = description;
         this.image = image;
