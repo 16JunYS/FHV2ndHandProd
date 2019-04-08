@@ -1,13 +1,16 @@
 <resources>
-    <string name="app_name">FHV2ndHandProd</string>
-    <string name="first_name">First Name</string>
-    <string name="last_name">Last Name</string>
-    <string name="password">Password</string>
-    <string name="register">Register</string>
-    <string name="username">Username</string>
-    <string name="enter_your_e_mail">enter your E-mail</string>
-    <string name="enter_your_password">enter your Password</string>
-    <string name="log_in">Log In</string>
-    <string name="forgot_your_password">Forgot your password?</string>
-    <string name="don_t_have_an_account_yet">Don\'t have an account yet?</string>
+    <string name="app_name" translatable="false">FHV2ndHandProd</string>
+    <string name="first_name" translatable="false">First Name</string>
+    <string name="last_name" translatable="false">Last Name</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="register" translatable="false">Register</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="enter_your_e_mail" translatable="false">enter your E-mail</string>
+    <string name="enter_your_password" translatable="false">enter your Password</string>
+    <string name="log_in" translatable="false">Log In</string>
+    <string name="forgot_your_password" translatable="false">Forgot your password?</string>
+    <string name="don_t_have_an_account_yet" translatable="false">Don\'t have an account yet?</string>
+    <string name="upload_image" translatable="false">Upload the Product Image</string>
+    <string name="upload" translatable="false">Upload</string>
+    <string name="description" translatable="false">Description of the Product</string>
 </resources>
