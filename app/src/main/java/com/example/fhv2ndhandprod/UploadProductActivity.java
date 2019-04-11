@@ -1,12 +1,13 @@
 package com.example.fhv2ndhandprod;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
-import android.support.v4.app.NotificationCompat;
+import android.support.v4.content.CursorLoader;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -14,8 +15,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.IOException;
-import java.net.URI;
 
 public class UploadProductActivity extends AppCompatActivity{
     private EditText productNameEditText, productDescriptionEditText, productPriceEditText;
@@ -30,7 +31,7 @@ public class UploadProductActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_uploadproduct);
+        setContentView(R.layout.activity_upload_product);
         productNameEditText = (EditText) findViewById(R.id.productNameEditText);
         productDescriptionEditText = (EditText) findViewById(R.id.productDescriptionEditText);
         productImageView = (ImageView) findViewById(R.id.productImageView);
@@ -46,7 +47,7 @@ public class UploadProductActivity extends AppCompatActivity{
     }
 
     public void upload_image(View view) {
-
+        selectPhotoFromGallery();
     }
     private void createNewProduct() {
         newProduct.setName(productNameEditText.getText().toString());
@@ -76,32 +77,41 @@ public class UploadProductActivity extends AppCompatActivity{
         if(requestCode == GALLERY) { //uploaded from Gallery
             if(data != null) {
                 Uri ProdUri = data.getData();
-                String[] filePath = {MediaStore.Images.Media.DATA};
-                /*
+                ImagePath = getPath(ProdUri);
                 try {
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), ProdUri);
-                    ImagePath = saveImage(bitmap);
-                    Toast.makeText(UploadProductActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
                     productImageView.setImageBitmap(bitmap);
+
+                    File file = new File(ImagePath);
+                    //productImageView.setImageURI(Uri.fromFile(file));
+                    Toast.makeText(UploadProductActivity.this, "Image path:"+ImagePath, Toast.LENGTH_LONG).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                     Toast.makeText(UploadProductActivity.this, "Failed.", Toast.LENGTH_SHORT).show();
                 }
-                */
+
             }
         }
         else if(requestCode == CAMERA) { //uploaded from Camera
             Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
 
             productImageView.setImageBitmap(thumbnail);
-            saveImage(thumbnail);
+            //saveImage(thumbnail);
             Toast.makeText(UploadProductActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
 
         }
     }
-    private String saveImage(Bitmap bitmap) {
+    private String getPath(Uri uri)
+    {
+        String[] filePath = {MediaStore.Images.Media.DATA};
+        CursorLoader cursorLoader = new CursorLoader(this, uri, filePath, null, null, null);
 
-        return "";
+        Cursor cursor = cursorLoader.loadInBackground();
+        int index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+
+        cursor.moveToFirst();
+
+        return cursor.getString(index);
     }
     private boolean validateNewProduct(Product product) {
         if(product.getId() == 0) {

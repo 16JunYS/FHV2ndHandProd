@@ -34,7 +34,7 @@ public class UploadListProductsActivity extends ArrayAdapter<Product> {
         Product product = sellProducts.get(position);
         //get the inflater and inflate the XML layout for each item
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.activity_uploadproduct, null);
+        View view = inflater.inflate(R.layout.activity_upload_product, null);
 
         //Changed TextView to EditText, new GUI
         EditText description = (EditText) view.findViewById(R.id.productNameEditText);
