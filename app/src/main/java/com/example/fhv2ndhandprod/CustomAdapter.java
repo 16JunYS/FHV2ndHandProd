@@ -27,18 +27,18 @@ public class CustomAdapter extends BaseAdapter {
     //used to get how many items are in your array
     @Override
     public int getCount() {
-        return 0;
+        return singleRow.size();
     }
 
     //needs to return what position we are at in the array
     @Override
     public Object getItem(int position) {
-        return null;
+        return singleRow.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     // getView method is where most of the work is done
@@ -49,7 +49,7 @@ public class CustomAdapter extends BaseAdapter {
 
         if (convertView == null) {
 
-            convertView = thisInflater.inflate(R.layout.list_view_row, null );
+            convertView = thisInflater.inflate(R.layout.list_view_row, parent, false);
 
             TextView theHeading = (TextView) convertView.findViewById(R.id.textHeading);
             TextView theSubHeading = (TextView) convertView.findViewById(R.id.textSubHeading);
