@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         myRowItems = new ArrayList();
 
-        myListView = (ListView) findViewById(R.id.flagListView);
+        myListView = (ListView) findViewById(R.id.productListView);
 
         fillArrayList();
 
@@ -38,38 +38,38 @@ public class MainActivity extends AppCompatActivity {
 
 
         RowItem row_one = new RowItem();
-        row_one.setHeading("Flag of France");
-        row_one.setSubHeading("France");
-        row_one.setSmallImageName(R.drawable.small_france);
-        row_one.setBigImageName(R.drawable.big_france );
+        row_one.setHeading("Blue armchair");
+        row_one.setSubHeading("I sell my pre-owned armchair");
+        row_one.setSmallImageName(R.drawable.small_armchair);
+        row_one.setBigImageName(R.drawable.big_armchair );
         myRowItems.add(row_one);
 
         RowItem row_two = new RowItem();
-        row_two.setHeading("Flag of Italy");
-        row_two.setSubHeading("Italy");
-        row_two.setSmallImageName(R.drawable.small_italy);
-        row_two.setBigImageName(R.drawable.big_italy);
+        row_two.setHeading("Seasonal bag");
+        row_two.setSubHeading("I sell bag in good condition from PARFOIS");
+        row_two.setSmallImageName(R.drawable.small_bag);
+        row_two.setBigImageName(R.drawable.big_bag);
         myRowItems.add(row_two);
 
         RowItem row_three = new RowItem();
-        row_three.setHeading("Flag of Germany");
-        row_three.setSubHeading("Germany");
-        row_three.setSmallImageName(R.drawable.small_germany);
-        row_three.setBigImageName( R.drawable.big_germany);
+        row_three.setHeading("Bike");
+        row_three.setSubHeading("I sell second hand bicycle");
+        row_three.setSmallImageName(R.drawable.small_bike);
+        row_three.setBigImageName( R.drawable.big_bike);
         myRowItems.add(row_three);
 
         RowItem row_four = new RowItem();
-        row_four.setHeading("Flag of Sweden");
-        row_four.setSubHeading("Sweden");
-        row_four.setSmallImageName(R.drawable.small_sweden);
-        row_four.setBigImageName( R.drawable.big_sweden);
+        row_four.setHeading("Microwave");
+        row_four.setSubHeading("Samsung microwave");
+        row_four.setSmallImageName(R.drawable.small_microwave);
+        row_four.setBigImageName( R.drawable.big_microwave);
         myRowItems.add(row_four);
 
         RowItem row_five = new RowItem();
-        row_five.setHeading("Flag of Romania");
-        row_five.setSubHeading("Romania");
-        row_five.setSmallImageName(R.drawable.small_romania);
-        row_five.setBigImageName( R.drawable.big_romania );
+        row_five.setHeading("Boots Hunter");
+        row_five.setSubHeading("Red boots hunter");
+        row_five.setSmallImageName(R.drawable.small_boots);
+        row_five.setBigImageName( R.drawable.big_boots );
         myRowItems.add(row_five);
 
         Toast.makeText(MainActivity.this, "Size:"+myRowItems.size(), Toast.LENGTH_SHORT).show();
