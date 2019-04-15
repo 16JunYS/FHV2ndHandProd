@@ -13,10 +13,10 @@ import java.util.ArrayList;
 
 public class CustomAdapter extends BaseAdapter {
 
-    private ArrayList<RowItem> singleRow;
+    private ArrayList<Product> singleRow;
     private LayoutInflater thisInflater;
 
-    public CustomAdapter(Context context, ArrayList<RowItem> aRow) {
+    public CustomAdapter(Context context, ArrayList<Product> aRow) {
 
         this.singleRow = aRow;
         thisInflater = ( LayoutInflater.from(context) );
@@ -49,18 +49,23 @@ public class CustomAdapter extends BaseAdapter {
 
         if (convertView == null) {
 
-            convertView = thisInflater.inflate(R.layout.list_view_row, parent, false);
+            convertView = thisInflater.inflate(R.layout.list_view_product, parent, false);
 
-            TextView theHeading = (TextView) convertView.findViewById(R.id.textHeading);
-            TextView theSubHeading = (TextView) convertView.findViewById(R.id.textSubHeading);
+            TextView theName = (TextView) convertView.findViewById(R.id.textName);
+            TextView theDescription = (TextView) convertView.findViewById(R.id.textDescription);
+            TextView thePrice = (TextView) convertView.findViewById(R.id.textPrice );
             ImageView theImage = (ImageView) convertView.findViewById(R.id.imageView);
 
-            RowItem currentRow = (RowItem) getItem(position);
+            Product currentRow = (Product) getItem(position);
 
-            theHeading.setText(currentRow.getHeading() );
-            theSubHeading.setText(currentRow.getSubHeading() );
+            theName.setText(currentRow.getName() );
+            theDescription.setText(currentRow.getDescription() );
+
+            double d = currentRow.getPrice();
+            thePrice.setText( String.valueOf( d ) );
+            thePrice. setText( "" + d + "€");
+
             theImage.setImageResource(currentRow.getBigImageName());
-
         }
 
         //convertView variable will hold all the rows for our ListView

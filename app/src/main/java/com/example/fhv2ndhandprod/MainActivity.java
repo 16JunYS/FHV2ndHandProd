@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ListView myListView;
-    ArrayList<RowItem> myRowItems;
+    ArrayList<Product> myRowItems;
 
 
 
@@ -37,40 +37,45 @@ public class MainActivity extends AppCompatActivity {
     private void fillArrayList() {
 
 
-        RowItem row_one = new RowItem();
-        row_one.setHeading("Blue armchair");
-        row_one.setSubHeading("I sell my pre-owned armchair");
-        row_one.setSmallImageName(R.drawable.small_armchair);
-        row_one.setBigImageName(R.drawable.big_armchair );
-        myRowItems.add(row_one);
+        Product product_one = new Product();
+        product_one.setName("Blue armchair");
+        product_one.setDescription("I sell my pre-owned armchair");
+        product_one.setPrice(60);
+        product_one.setSmallImageName(R.drawable.small_armchair);
+        product_one.setBigImageName(R.drawable.big_armchair );
+        myRowItems.add(product_one);
 
-        RowItem row_two = new RowItem();
-        row_two.setHeading("Seasonal bag");
-        row_two.setSubHeading("I sell bag in good condition from PARFOIS");
-        row_two.setSmallImageName(R.drawable.small_bag);
-        row_two.setBigImageName(R.drawable.big_bag);
-        myRowItems.add(row_two);
+        Product product_two = new Product();
+        product_two.setName("Seasonal bag");
+        product_two.setDescription("I sell bag in good condition from PARFOIS");
+        product_one.setPrice(35);
+        product_two.setSmallImageName(R.drawable.small_bag);
+        product_two.setBigImageName(R.drawable.big_bag);
+        myRowItems.add(product_two);
 
-        RowItem row_three = new RowItem();
-        row_three.setHeading("Bike");
-        row_three.setSubHeading("I sell second hand bicycle");
-        row_three.setSmallImageName(R.drawable.small_bike);
-        row_three.setBigImageName( R.drawable.big_bike);
-        myRowItems.add(row_three);
+        Product product_three = new Product();
+        product_three.setName("Bike");
+        product_three.setDescription("I sell second hand bicycle");
+        product_one.setPrice(470);
+        product_three.setSmallImageName(R.drawable.small_bike);
+        product_three.setBigImageName( R.drawable.big_bike);
+        myRowItems.add(product_three);
 
-        RowItem row_four = new RowItem();
-        row_four.setHeading("Microwave");
-        row_four.setSubHeading("Samsung microwave");
-        row_four.setSmallImageName(R.drawable.small_microwave);
-        row_four.setBigImageName( R.drawable.big_microwave);
-        myRowItems.add(row_four);
+        Product product_four = new Product();
+        product_four.setName("Microwave");
+        product_four.setDescription("Samsung microwave");
+        product_one.setPrice(80);
+        product_four.setSmallImageName(R.drawable.small_microwave);
+        product_four.setBigImageName(R.drawable.big_microwave);
+        myRowItems.add(product_four);
 
-        RowItem row_five = new RowItem();
-        row_five.setHeading("Boots Hunter");
-        row_five.setSubHeading("Red boots hunter");
-        row_five.setSmallImageName(R.drawable.small_boots);
-        row_five.setBigImageName( R.drawable.big_boots );
-        myRowItems.add(row_five);
+        Product product_five = new Product();
+        product_five.setName("Boots Hunter");
+        product_five.setDescription("Red boots hunter");
+        product_one.setPrice(56.50);
+        product_five.setSmallImageName(R.drawable.small_boots);
+        product_five.setBigImageName( R.drawable.big_boots );
+        myRowItems.add(product_five);
 
         Toast.makeText(MainActivity.this, "Size:"+myRowItems.size(), Toast.LENGTH_SHORT).show();
     }
