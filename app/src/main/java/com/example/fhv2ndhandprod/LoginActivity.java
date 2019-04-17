@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void click_register(View view) {
-        //goes to Registeration Form
+        //goes to Registration Form
         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
         startActivity(intent);
     }

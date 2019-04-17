@@ -50,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                         else {
                             //TEMP))DEBUG
-                            Toast.makeText(RegisterActivity.this, "가입되었습니다", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Successfully Registered", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -61,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
                 });
             }
             else {
-                Toast.makeText(this, "잘못된 형식의 이메일입니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "wrong e-mail", Toast.LENGTH_SHORT).show();
             }
             user = new User(fName, lName, Email, PW);
             Toast.makeText(this, "User created: "+dbChild, Toast.LENGTH_SHORT).show();

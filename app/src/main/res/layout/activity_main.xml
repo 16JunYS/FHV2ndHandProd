@@ -6,50 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+
+    <ListView
+        android:id="@+id/productListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/productNameEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            android:onClick="TEMP_register"/>
-
-        <TextView
-            android:id="@+id/productDescriptionEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Description" />
-
-        <ImageView
-            android:id="@+id/productImageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars[10]" />
-
-        <TextView
-            android:id="@+id/productPriceEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="numberSigned"
-            android:text="Price" />
-
-        <Button
-            android:id="@+id/buyButton"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="250dp"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:text="Buy" />
-    </LinearLayout>
-
-
+        android:divider="#00000000"
+        android:dividerHeight="20dp"/>
 </android.support.constraint.ConstraintLayout>
